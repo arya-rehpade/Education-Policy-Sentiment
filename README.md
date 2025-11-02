@@ -223,3 +223,33 @@ I’m still unsure about how NEP 2020 affects higher education.
 ### 🖥️ How to Run the Streamlit App Locally
 
 #### Step 1️⃣ – Clone the Repository  
+git clone https://github.com/arya-rehpade/Education-Policy-Sentiment.git
+cd Education-Policy-Sentiment
+
+#### Step 2️⃣ – Install Dependencies
+pip install -r requirements.txt
+
+#### Step 3️⃣ – Launch the App
+streamlit run app.py
+
+
+---
+
+👩‍💻 Author  
+Arya Rehpade  
+🎓 Machine Learning & Data Science Enthusiast  
+📍 India
+
+🔗 GitHub: arya-rehpade  
+🔗 Live App: [https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)  
+🔗 Project Repository: Education-Policy-Sentiment (GitHub)
+
+---
+
+License
+
+This project is licensed under the MIT License — you are free to use, modify, and distribute it for educational or research purposes, provided that proper credit is given to the author.
+
+
+
+
