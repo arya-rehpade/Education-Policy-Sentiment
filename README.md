@@ -2,49 +2,48 @@
 
 ###  Project Overview
 
-This project focuses on **sentiment analysis of educational policy-related text data** to understand public opinion on educational reforms such as *NEP 2020* (National Education Policy).  
-The main objective is to build multiple machine learning models that classify text into **positive**, **negative**, or **neutral** sentiments, and then compare their performance using standard evaluation metrics.
+The current project is dedicated to the sentiment analysis of the text data related to the educational policy to get to know what people think about the educational reforms like NEP 2020 (National Education Policy).  
+The primary goal is to construct several machine learning models which categorize text and either be positive or negative or neutral, and subsequently evaluate the performance of such models in accordance with the standard evaluation measures.
 
-The project demonstrates how Natural Language Processing (NLP) techniques can help interpret feedback on policies and government decisions from online discussions, news headlines, and articles.
-
----
-
-### 📊 Problem Statement
-
-Education policies directly impact millions of students and teachers. Identifying how the public perceives such policies can guide better decision-making and reforms.  
-The challenge was to automatically analyze user opinions or statements related to educational policies and categorize them into sentiment classes.
+The project illustrates that Natural Language Processing (NLP) methods may be used to process online discussion feedback concerning policies and government actions on the basis of news headlines and news articles.
 
 ---
 
-### 📂 Dataset Details
+###  Problem Statement
 
-1️⃣ Training Dataset — NEP 2020 English Tweets
+The policy on education has direct effects on millions of learners and educators. It is possible to identify the way in which the masses view such policies to make better decisions and adjustments.  
+The problem was to automatically examine the opinions or statements of the users in the context of educational policies and to classify them according to the sentiment categories.
 
-This dataset contains English tweets related to India’s National Education Policy (NEP 2020).  
-Each tweet is labeled with a sentiment category indicating the public opinion toward the policy.
+---
+
+###  Dataset Details
+
+1) Training Data - NEP 2020 English Tweets.
+
+This data consists of tweets in English concerning the National Education Policy (NEP 2020) of India.  
+Each of the tweets has a sentiment category that defines how the population views the policy.
 
 | Sentiment Category | Description                                      | Number of Tweets |
 | ------------------ | ------------------------------------------------ | ---------------- |
-| Positive           | Tweets expressing favorable views about NEP 2020 | 3200             |
-| Negative           | Tweets showing disagreement or criticism         | 2950             |
-| Neutral            | Tweets with balanced or factual statements       | 3100             |
+| Positive           | Tweets about NEP 2020 with positive sentiments   | 3200             |
+| Negative           | Tweets expressing protest or criticism           | 2950             |
+| Neutral            | Tweets that have neutral or factual sentences    | 3100             |
 
 <img src="https://github.com/user-attachments/assets/6f579d89-e333-4913-a181-0be54de5bf1c" width="420"/>
 
 Key Preprocessing Steps:
 
-Text cleaning (punctuation, URLs, emojis, and stopword removal)
+Text cleaning (punctuations, URLs, emojis and removal of stop words)
 
-Tokenization and normalization
+Normalization and tokenization.
 
-TF-IDF feature extraction for text representation
+TF-IDF representational feature extraction of text.
 
-📘 Dataset Source: NEP_2020_english_tweet.csv
+Dataset Source NEP_2020_english_tweet.csv.
 
-2️⃣ Testing Dataset — NEP 2020 Test Tweets
+2) Testing Dataset — NEP 2020 Test Tweets
 
-The testing dataset is a smaller subset containing unseen tweets about NEP 2020.  
-It helps evaluate how well trained models generalize to new data.
+The testing dataset is a smaller sample that includes unseen tweets on NEP 2020.  
 
 | Sentiment Category | Description                        | Sample Size |
 | ------------------ | ---------------------------------- | ----------- |
@@ -54,40 +53,40 @@ It helps evaluate how well trained models generalize to new data.
 
 <img src="https://github.com/user-attachments/assets/69550d52-0b1f-4195-95f4-ee66f90f1002" width="420"/>
 
-This cross-dataset evaluation guarantees the classifier is working optimally outside the initial training space.
+This cross dataset test will ensure that the classifier is operating best beyond the original training space.
 
-📘 Dataset Source: test.csv
+ Dataset Source: test.csv
 
 ---
 
-### ⚙️ Methodology
+###  Methodology
 
-The workflow involves several major steps:
+The steps of the workflow include the following significant steps:
 
 1. **Data Preprocessing**  
-   - Clean and normalize textual data  
-   - Apply TF-IDF vectorization to transform text into numerical format  
+   - Clean and purify text data.
+   - TF-IDF vectorization of text to numerical form.  
 
 2. **Model Training**  
-   - Implemented three machine learning algorithms:  
+   - Three machine learning algorithms were used:  
      - Logistic Regression  
      - Support Vector Machine (SVM)  
      - Naive Bayes  
-   - Models were trained on the same TF-IDF features for fair comparison  
+   -Fair comparison of models was done using the same TF-IDF features.    
 
 3. **Evaluation**  
-   - Used metrics such as Accuracy, Precision, Recall, and F1-Score  
-   - Compared all three models on identical test data  
+   - Accuracy, Precision, Recall and F1-Score were used.    
+   - performed a comparison of all three models on the same test data.   
 
 4. **Deployment**  
-   - Built an interactive **Streamlit web app** that allows users to:  
-     - Input custom text  
-     - Select models for comparison  
-     - Instantly view sentiment predictions side-by-side  
+   - Developed an interactive web value-added application of Streamlit that enables users to:  
+     - Input custom text   
+     - Choose models to compare them. 
+     - See sentiment prediction simultaneously. 
 
 ---
 
-### 🧠 Models Used
+###  Models Used
 
 | Model | Description | Accuracy |
 |--------|--------------|-----------|
@@ -99,18 +98,18 @@ The workflow involves several major steps:
 
 ### Model Training and Evaluation
 
-This chapter gives in-depth information about how the models were trained, validated, and tested on two datasets — the NEP 2020 English Tweets to train and the NEP 2020 Test Tweets to test.
+The chapter provides detailed details on the training, validation and testing of the models on two datasets, namely; the NEP 2020 English Tweets to train the models and the NEP 2020 Test Tweets to test the models.
 
 Training Information (BBC Dataset)  
 NLP Preprocessing Pipeline  
 
 | **Step**                 | **Description**                                                            | **Libraries Used**                                                                         |
 | :----------------------- | :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
-| 1️⃣ Data Cleaning        | Removed punctuation, URLs, digits, emojis, and converted text to lowercase | `re`, `string`                                                                             |
-| 2️⃣ Tokenization         | Split tweets into individual tokens (words)                                | `nltk.word_tokenize`                                                                       |
-| 3️⃣ Stopword Removal     | Eliminated common non-informative words like “the”, “is”, “and”            | `nltk.corpus.stopwords`                                                                    |
-| 4️⃣ Lemmatization        | Converted words to their base form (e.g., “running” → “run”)               | `WordNetLemmatizer`                                                                        |
-| 5️⃣ TF-IDF Vectorization | Transformed cleaned text into numerical feature vectors                    | `sklearn.feature_extraction.text.TfidfVectorizer(max_features=5000, stop_words='english')` |
+| 1) Data Cleaning        | Removed punctuation, URLs, digits, emojis, and converted text to lowercase | `re`, `string`                                                                             |
+| 2) Tokenization         | Split tweets into individual tokens (words)                                | `nltk.word_tokenize`                                                                       |
+| 3) Stopword Removal     | Eliminated common non-informative words like “the”, “is”, “and”            | `nltk.corpus.stopwords`                                                                    |
+| 4) Lemmatization        | Converted words to their base form (e.g., “running” → “run”)               | `WordNetLemmatizer`                                                                        |
+| 5) TF-IDF Vectorization | Transformed cleaned text into numerical feature vectors                    | `sklearn.feature_extraction.text.TfidfVectorizer(max_features=5000, stop_words='english')` |
 
 All models were trained on TF-IDF features and validated using a train-test split (80%-20%).
 
@@ -126,21 +125,21 @@ All models were trained on TF-IDF features and validated using a train-test spli
 <img src="https://github.com/user-attachments/assets/00e91471-532e-467e-9415-8de0e0aebe4d" width="420"/>
 
 Observation:  
-SVM outperformed all other models in accuracy and stability, making it the best choice for classifying public sentiment on NEP 2020 tweets.
+The SVM was more accurate and stable than all other models, so it is the most appropriate to use in classifying the sentiment of the people on NEP 2020 tweets.
 
 ### Testing and Cross-Dataset Validation (NEP 2020 Dataset)
 
-To evaluate model generalization and ensure reliability, the trained sentiment classifiers were tested on the NEP 2020 Test Dataset — a collection of unseen tweets related to India’s National Education Policy 2020, categorized into Positive, Negative, and Neutral sentiments.  
+In order to gauge model generalization and to guarantee reliability, the trained sentiment classifiers were tested on the NEP 2020 Test Dataset - a set of unseen tweets about the National Education Policy 2020 in India which had Positive, Negative and Neutral sentiments.  
 
 Testing Steps:
 
-1️⃣ Loaded trained sentiment models (.pkl) and the TF-IDF vectorizer.  
-2️⃣ Preprocessed the test.csv dataset using the same cleaning pipeline as the training data.  
-3️⃣ Applied the trained TF-IDF vectorizer for text transformation.  
-4️⃣ Generated sentiment predictions for each model (Logistic Regression, Naive Bayes, and SVM).  
-5️⃣ Compared model predictions with true sentiment labels.  
-6️⃣ Computed evaluation metrics — Accuracy, Precision, Recall, and F1-Score.  
-7️⃣ Visualized confusion matrices and model performance comparison charts.
+  1) Trained sentiment model (.pkl) and the TF-IDF vectorizer.  
+  2) Processed the test.csv data with the same cleaning pipeline as with the training data.  
+  3) Text transformation with the trained TF-IDF vectorizer.
+  4) Predictions of sentiment generated on each of the models (Logistic Regression, naive Bayes and SVM).
+  5) Comparison of model predictions and true sentiment labels.    
+  6) Calculated metrics of evaluation — Accuracy, Precision, Recall, and F1-Score.  
+  7) Visualised confusion matrices and model performance comparison charts.
 
 Test Results and Comparison:
 
@@ -154,61 +153,60 @@ Test Results and Comparison:
 <img src="https://github.com/user-attachments/assets/f523f22a-d63b-4172-a24a-74dbf9639d36" width="420"/>
 
 Observation:  
-Logistic Regression achieved the best overall performance on the NEP 2020 test set, demonstrating strong generalization and consistent sentiment classification accuracy across unseen tweets.  
-The model successfully captured varying tones of opinions in English tweets.  
-Logistic Regression emerged as the most robust and stable performer.  
-Naive Bayes and SVM models also maintained high accuracy (~94%), confirming reliable cross-dataset adaptability.
+The NEP TEAM NEP 2020 test set showed the best overall results on the Logistic Regression, which indicates a good overall generalization and the accuracy of sentiment classification on non-seen tweets.  
+The model was able to model the different color shades of opinions in English tweets.  
+The strongest and the most stable performer was Logistic Regression.  
+High accuracy (94 to 94) was also preserved in Naive Bayes and SVM models proving the credibility of cross-dataset adaptability.
 
-### 📈 Results Summary
+###  Results Summary
 
-The comparative analysis shows that **Logistic Regression** performed slightly better than SVM and Naive Bayes in terms of overall accuracy and consistency across classes.
+The comparative analysis demonstrates that, the overall accuracy and consistency over classes, of the **Logistic Regression worked a little better than SVM and Naive Bayes.
 
 - Logistic Regression: 87% accuracy  
 - SVM: 83% accuracy  
 - Naive Bayes: 79% accuracy  
 
-Visualizing model comparison helps understand which algorithm handles education policy sentiment best in limited data conditions.
+The comparison of models is best explored by visualizing so as to understand which algorithm can manage the education policy sentiment under limited data conditions.
 
 ---
 
-## 🌐 Streamlit Web Application
+##  Streamlit Web Application
 
-An interactive **Streamlit web app** was developed to make the **NEP 2020 Tweet Sentiment Analyzer** accessible to users in real time.  
-The app utilizes the trained **TF-IDF vectorizer** and **Logistic Regression model** to classify tweets into **Positive**, **Negative**, or **Neutral** sentiments.
-
----
-
-### 🟢 Live App (Deployed Link)  
-👉 [https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)
+To provide the NEP 2020 Tweet Sentiment Analyzer to the audience in real time, an interactive web application created with Streamlit was built.  
+To identify the sentiment of the tweets, the app makes use of the trained **TF-IDF vectorizer and the Logistic Regression model to classify into either Positive, Negative, or Neutral sentiments.
 
 ---
 
-### 🧭 How the App Works
-
-#### 📝 Input:  
-Users can enter one or more tweets related to the **National Education Policy (NEP 2020)** — separated by new lines.  
-Each tweet is analyzed independently to determine the expressed sentiment.
-
-**Example Input:**  
-NEP 2020 will revolutionize the education system in India.  
-The implementation process needs more clarity and transparency.  
-I’m still unsure about how NEP 2020 affects higher education.
+###  Live App (Deployed Link)  
+[https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)
 
 ---
 
-#### ⚙️ Processing Pipeline:  
-- Tweets are **cleaned** (removal of URLs, emojis, and stopwords).  
-- Text is **vectorized** using the saved **TF-IDF model**.  
-- Each tweet is passed through the trained **sentiment classification model**.  
-- The model predicts whether the tweet is **Positive**, **Negative**, or **Neutral**.  
-- Streamlit then visualizes results with a clean, color-coded output.
+###  How the App Works
+
+####  Input:  
+Users would be allowed to post one or several tweets on the topic of the National Education Policy (NEP 2020) - with new lines between them.  
+The analysis of the tweets is done separately in order to identify the expressed sentiment.
+
+** Example Input:**  
+The education system in India will be transformed through NEP 2020.  
+The process of implementation requires a better understanding and openness.  
+I am yet to understand the impact of NEP 2020 on higher education.
+---
+
+####  Processing Pipeline:  
+- Tweets are cleaned (Url, emojis, and stopwords are removed).    
+-The saved TF-IDF model is used to text-vectorize.    
+- The trained model of sentiment classification is run on each tweet.   
+- The model will give an indication on whether the tweet will be Positive, Negative or Neutral.  
+- Streamlit then plots the results in a clean color-coded manner.
 
 ---
 
-#### 📋 Output:  
-- A **table** showing each input tweet with its predicted sentiment.  
-- A **bar chart** summarizing sentiment distribution across all entered tweets.  
-- Instant results rendered directly in the browser for real-time analysis.
+####  Output:  
+- A table containing all the input tweets and the sentiment they are predicted to have.   
+- A bar chart that would indicate the distribution of sentiment among all the tweets that have been entered.  
+-  Real-time analysis in the form of instant results.
 
 **Example Output Table:**
 
@@ -220,25 +218,25 @@ I’m still unsure about how NEP 2020 affects higher education.
 
 ---
 
-### 🖥️ How to Run the Streamlit App Locally
+###  How to Run the Streamlit App Locally
 
-#### Step 1️⃣ – Clone the Repository  
+#### Step 1) – Clone the Repository  
 git clone https://github.com/arya-rehpade/Education-Policy-Sentiment.git
 cd Education-Policy-Sentiment
 
-#### Step 2️⃣ – Install Dependencies
+#### Step 2) – Install Dependencies
 pip install -r requirements.txt
 
-#### Step 3️⃣ – Launch the App
+#### Step 3) – Launch the App
 streamlit run app.py
 
 
 ---
 
-👩‍💻 Author  
-Arya Rehpade  
-🎓 Machine Learning & Data Science Enthusiast  
-📍 India
+ Author  
+ Arya Rehpade  
+ Machine Learning & Data Science Enthusiast  
+ India
 
 🔗 GitHub: arya-rehpade  
 🔗 Live App: [https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)  
