@@ -190,7 +190,7 @@ Users would be allowed to post one or several tweets on the topic of the Nationa
 The analysis of the tweets is done separately in order to identify the expressed sentiment.
 
 
-** Example Input:**  
+**Example Input:**  
 
 The education system in India will be transformed through NEP 2020. 
 
@@ -228,6 +228,7 @@ I am yet to understand the impact of NEP 2020 on higher education.
 
 #### Step 1) – Clone the Repository  
 git clone https://github.com/arya-rehpade/Education-Policy-Sentiment.git
+
 cd Education-Policy-Sentiment
 
 #### Step 2) – Install Dependencies
