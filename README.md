@@ -190,6 +190,7 @@ Users would be allowed to post one or several tweets on the topic of the Nationa
 The analysis of the tweets is done separately in order to identify the expressed sentiment.
 
 ** Example Input:**  
+
 The education system in India will be transformed through NEP 2020. 
 
 The process of implementation requires a better understanding and openness.  
@@ -200,7 +201,7 @@ I am yet to understand the impact of NEP 2020 on higher education.
 
 ####  Processing Pipeline:  
 - Tweets are cleaned (Url, emojis, and stopwords are removed).    
--The saved TF-IDF model is used to text-vectorize.    
+- The saved TF-IDF model is used to text-vectorize.    
 - The trained model of sentiment classification is run on each tweet.   
 - The model will give an indication on whether the tweet will be Positive, Negative or Neutral.  
 - Streamlit then plots the results in a clean color-coded manner.
