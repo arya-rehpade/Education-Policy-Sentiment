@@ -121,7 +121,6 @@ All models were trained on TF-IDF features and validated using a train-test spli
 | :------------------ | :----------: | :-----------: | :--------: | :----------: | :--------------------------------------------------------------------- |
 | Logistic Regression |    91.42%    |     0.913     |    0.911   |     0.912    | Strong linear baseline, interpretable results                          |
 | Naive Bayes         |    90.87%    |     0.909     |    0.906   |     0.907    | Performs well with smaller text data                                   |
-| Random Forest       |    92.35%    |     0.924     |    0.922   |     0.923    | Slightly better generalization on unseen tweets                        |
 | **SVM (Best)**      |  **93.12%**  |   **0.931**   |  **0.930** |   **0.930**  | Best performing model overall with balanced precision-recall trade-off |
 
 <img src="https://github.com/user-attachments/assets/00e91471-532e-467e-9415-8de0e0aebe4d" width="420"/>
@@ -244,7 +243,9 @@ streamlit run app.py
  India
 
 🔗 GitHub: https://github.com/arya-rehpade/
+
 🔗 Live App: [https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)  
+
 🔗 Project Repository: https://github.com/arya-rehpade/Education-Policy-Sentiment/ (GitHub)
 
 ---
