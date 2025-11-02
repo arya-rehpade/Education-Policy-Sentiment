@@ -115,6 +115,8 @@ NLP Preprocessing Pipeline
 
 All models were trained on TF-IDF features and validated using a train-test split (80%-20%).
 
+---
+
 ### Training Results and Comparison
 
 | **Model**           | **Accuracy** | **Precision** | **Recall** | **F1-Score** | **Notes**                                                              |
