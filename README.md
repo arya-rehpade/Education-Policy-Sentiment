@@ -1,4 +1,4 @@
-# Education Policy Sentiment
+# Education Policy Sentimental Analysis
 
 ###  Project Overview
 
@@ -243,9 +243,9 @@ streamlit run app.py
  Machine Learning & Data Science Enthusiast  
  India
 
-🔗 GitHub: arya-rehpade  
+🔗 GitHub: https://github.com/arya-rehpade/
 🔗 Live App: [https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/](https://education-policy-sentiment-bbrz667ksw9zh3xzsfde8p.streamlit.app/)  
-🔗 Project Repository: Education-Policy-Sentiment (GitHub)
+🔗 Project Repository: https://github.com/arya-rehpade/Education-Policy-Sentiment/ (GitHub)
 
 ---
 
