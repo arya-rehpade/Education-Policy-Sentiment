@@ -39,7 +39,7 @@ Key Preprocessing Steps:
 
 3)TF-IDF representational feature extraction of text.
 
-Dataset Source NEP_2020_english_tweet.csv.
+Dataset Source : https://www.kaggle.com/datasets/rishabh6377/india-national-education-policy2020-tweets-dataset?
 
 
 
@@ -57,8 +57,8 @@ The testing dataset is a smaller sample that includes unseen tweets on NEP 2020.
 
 This cross dataset test will ensure that the classifier is operating best beyond the original training space.
 
- Dataset Source: test.csv
-
+ Dataset Source: https://www.kaggle.com/datasets/arkhoshghalb/twitter-sentiment-analysis-hatred-speech
+ 
 ---
 
 ###  Methodology
