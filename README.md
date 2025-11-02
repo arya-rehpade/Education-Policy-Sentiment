@@ -189,6 +189,7 @@ To identify the sentiment of the tweets, the app makes use of the trained **TF-I
 Users would be allowed to post one or several tweets on the topic of the National Education Policy (NEP 2020) - with new lines between them.  
 The analysis of the tweets is done separately in order to identify the expressed sentiment.
 
+
 ** Example Input:**  
 
 The education system in India will be transformed through NEP 2020. 
