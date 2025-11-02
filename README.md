@@ -33,10 +33,13 @@ Each of the tweets has a sentiment category that defines how the population view
 
 Key Preprocessing Steps:
 1)Text cleaning (punctuations, URLs, emojis and removal of stop words)
+
 2)Normalization and tokenization.
+
 3)TF-IDF representational feature extraction of text.
 
 Dataset Source NEP_2020_english_tweet.csv.
+
 
 2) Testing Dataset — NEP 2020 Test Tweets
 
